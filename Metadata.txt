@@ -1,0 +1,17 @@
+Info on Data Files
+
+2014ParasiteSurveyJustBrood 
+This file contains the data for all host species (“Species”), Dates (also converted to Julian Day in both YEARDAY and DAY formats), the lake (“Lake”), the total number of animals scanned for infection (“Total”), the proportion of the entire population infected with Bp (“PropBrood”), the proportion of adult females (asexual and sexual) infected with Bp (“PropAdBrood), and the proportion of asexual adult females infected with Bp (“PropAsexAdBrood”). 
+
+NorthBPLifeTable2013
+This was done on just Daphnia dentifera, collected from North Lake in 2013 (see methods in text for more information). Hosts were infected or uninfected (“Treatment”). The file also includes the replicate (“Rep”), the day on which an animal died (“Day.Death”). If an individual survived to the end of the experiment, the “Censored” value is 0, and Day.Death=36. If the animal died prior to the end of the experiment, Censored=1. (See Crawley The R Book Edition 1 page 801 for more.) “Sum.Offspring” gives the total reproduction for each individual over the course of the experiment. Did.Clear=1 indicates that an animal was initially infected but then cleared infection. 
+
+NorthBPLifeTable2014
+This life table used Daphnia collected from North Lake in 2014 (see methods in text for more information). Two host species were used, D. dentifera and D. retrocurva. “Treatment” gives host species and infection status. All other columns are as for NorthBPLifeTable2013.
+
+CedarBPLifeTable2014
+This life table used Daphnia collected from Cedar Lake in 2014 (see methods in text for more information). All other columns are as for NorthBPLifeTable2014.
+
+
+
+
