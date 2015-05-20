@@ -7,9 +7,9 @@
 
 # Set working directory
 #use line below if working on pc
-setwd("C:/Users/duffymeg/Box Sync/Parasites/BroodParasite/CodeforDuffyetalBPpaper")
+# setwd("C:/Users/duffymeg/Box Sync/Parasites/BroodParasite/CodeforDuffyetalBPpaper")
 #use line below if working on mac
-# setwd("~/Box Sync/Parasites/BroodParasite/CodeforDuffyetalBPpaper")
+setwd("~/Box Sync/Parasites/BroodParasite/CodeforDuffyetalBPpaper")
 
 # load all data
 # North Fall 2013 life table
@@ -210,8 +210,8 @@ library(dplyr)
 proppresent<-shortdata %>% group_by(Species2, Lake2) %>% summarize(prop = mean(PropBrood > 0), count = n())
 enoughdates <- subset(proppresent,count>4)
 enoughdates$perc <- enoughdates$prop*100
-summarypresent <- enoughdates %>% group_by(Species2) %>% summarize (minprop = min(prop),maxprop = max(prop))
-summarypresentbylake <- enoughdates %>% group_by(Lake2) %>% summarize (minprop = min(prop),maxprop = max(prop))
+summarypresent <- enoughdates %>% group_by(Species2) %>% summarize (minprop = min(prop),maxprop = max(prop),medprop=median(prop))
+summarypresentbylake <- enoughdates %>% group_by(Lake2) %>% summarize (minprop = min(prop),maxprop = max(prop),medprop=median(prop))
 
 summarypresent
 summarypresentbylake
