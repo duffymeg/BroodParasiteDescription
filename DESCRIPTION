@@ -1,0 +1,16 @@
+Package: BroodParasiteDescription
+Title: Brood Parasite Description 
+Version: 0.0.0.9000
+Authors@R: person("Megan", "Duffy", email = "some@email.com", role = c("aut", "cre"))
+Description: Code and data associated with Duffy, James, and Longworth Applied and Environmental Microbiology paper describing the ecology, virulence, and phylogeny of a brood parasite of Daphnia, Blastulidium paedophthorum; http://dx.doi.org/10.5281/zenodo.17804
+Depends: R (>= 3.2.0),
+    survival,
+    stringr,
+    plyr,
+    ggplot2,
+    coin,
+    reshape2,
+    scales,
+    dplyr,
+    grid
+License: Unknown 

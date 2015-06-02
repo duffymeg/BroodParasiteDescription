@@ -9,18 +9,17 @@
 #use line below if working on pc
 # setwd("C:/Users/duffymeg/Box Sync/Parasites/BroodParasite/CodeforDuffyetalBPpaper")
 #use line below if working on mac
-setwd("~/Box Sync/Parasites/BroodParasite/CodeforDuffyetalBPpaper")
 
 # load all data
 # North Fall 2013 life table
-brooddataNorth2013 <- read.table("NorthBPLifeTable2013.txt", header=TRUE, sep="\t", na.strings="?", dec=".", strip.white=TRUE)
+brooddataNorth2013 <- read.table("data/NorthBPLifeTable2013.txt", header=TRUE, sep="\t", na.strings="?", dec=".", strip.white=TRUE)
 # Now moving on to Fall 2014 data 
 # North Lake:
-brooddataNorth2014 <- read.csv("NorthBPLifeTable2014.csv", header=TRUE, na.strings="?", dec=".", strip.white=TRUE)
+brooddataNorth2014 <- read.csv("data/NorthBPLifeTable2014.csv", header=TRUE, na.strings="?", dec=".", strip.white=TRUE)
 brooddataNorth2014dentifera <- subset(brooddataNorth2014,Treatment=="Infected Dent" | Treatment=="Uninfected Dent")
 brooddataNorth2014retrocurva <- subset(brooddataNorth2014,Treatment=="Infected Retro" | Treatment=="Uninfected Retro")
 # Cedar Lake:
-brooddataCedar2014 <- read.csv("CedarBPLifeTable2014.csv", header=TRUE, na.strings="?", dec=".", strip.white=TRUE)
+brooddataCedar2014 <- read.csv("data/CedarBPLifeTable2014.csv", header=TRUE, na.strings="?", dec=".", strip.white=TRUE)
 brooddataCedar2014dentifera <- subset(brooddataCedar2014,Treatment=="Infected Dent" | Treatment=="Uninfected Dent")
 brooddataCedar2014retrocurva <- subset(brooddataCedar2014,Treatment=="Infected Retro" | Treatment=="Uninfected Retro")
 
@@ -182,7 +181,7 @@ tapply(allbrooddata$Sum.Offspring,list(allbrooddata$LakeYear,allbrooddata$Host,a
 library(reshape2)
 library(scales)
 
-parasitedata <- read.csv("2014ParasiteSurveyJustBrood.csv")
+parasitedata <- read.csv("data/2014ParasiteSurveyJustBrood.csv")
 
 colnames(parasitedata)
 
